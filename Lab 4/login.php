@@ -29,11 +29,19 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['login'])) {
     }
 
     if ($result) {
-        $row = $result->fetch_assoc();
-        $name = $row['name'];
-        $db->close();
-        header("Location: welcome.php?name=" . urlencode($name));
-        exit();
+        if ($result->num_rows === 1) {
+            $row = $result->fetch_assoc();
+            $name = $row['name'];
+            $db->close();
+            echo "<script>alert('Login successful! Welcome, $name.');</script>";
+            header("Location: welcome.php?name=" . urlencode($name));
+            exit();
+        } else {
+            echo "<script>alert('Invalid login credentials. Please check your email and password.');
+            window.location.href = \"loginForm.php\";
+            </script>";
+            exit();
+        }
     } else {
         echo "Error getting record: " . $stmt->error;
     }
