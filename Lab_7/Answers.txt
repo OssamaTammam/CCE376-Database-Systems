@@ -18,6 +18,32 @@ Macy Holman
 
 -- Question 2: Write an SQL query to retrieve count of items and total price of each order
 
+order_id	item_quantity	total_price	
+1	4	3772.00	
+2	25	113675.00	
+4	12	63408.00	
+7	23	112256.00	
+8	31	115217.00	
+11	12	30558.00	
+14	25	207475.00	
+15	21	143171.00	
+17	15	78385.00	
+18	38	220062.00	
+19	3	10959.00	
+20	16	45245.00	
+22	2	9094.00	
+23	33	173920.00	
+25	12	55212.00	
+26	25	148444.00	
+28	29	94516.00	
+29	15	40395.00	
+31	10	59720.00	
+32	8	440.00	
+33	32	59366.00	
+34	38	141024.00	
+35	19	97636.00	
+37	16	69299.00	
+38	42	223593.00
 
 -- Question 3: Write an SQL query to retrieve order number for each order that had been shipped from warehouse in ‘Arica’
 SELECT order_id
