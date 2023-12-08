@@ -2,12 +2,12 @@
 CREATE DATABASE course - registration - processing - system;
 -- Initialize the tables
 CREATE TABLE department(
-    dept_id BIGINT AUTO_INCREMENT NOT NULL,
+    dept_id BIGINT NOT NULL,
     dept_name VARCHAR(255) NOT NULL,
     PRIMARY KEY (dept_id)
 );
 CREATE TABLE student(
-    student_id BIGINT AUTO_INCREMENT NOT NULL,
+    student_id BIGINT NOT NULL,
     student_name VARCHAR(255) NOT NULL,
     major VARCHAR(255) NOT NULL,
     level INT NOT NULL,
@@ -15,7 +15,7 @@ CREATE TABLE student(
     PRIMARY KEY (student_id)
 );
 CREATE TABLE professor(
-    prof_id BIGINT AUTO_INCREMENT NOT NULL,
+    prof_id BIGINT NOT NULL,
     prof_name VARCHAR(255) NOT NULL,
     dept_id INT NOT NULL,
     PRIMARY KEY (prof_id)
@@ -36,7 +36,7 @@ CREATE TABLE enrolled(
     student_id BIGINT NOT NULL,
     course_code VARCHAR(10) NOT NULL,
     quarter VARCHAR(10) NOT NULL,
-    `year` INT NOT NULL,
+    year INT NOT NULL,
     enrolled DATE NOT NULL,
     PRIMARY KEY (student_id, course_code, quarter, year)
 );
