@@ -1,6 +1,7 @@
 -- Create the database
-CREATE DATABASE course - registration - processing - system;
+CREATE DATABASE course_registration_processing_system;
 -- Initialize the tables
+USE course_registration_processing_system;
 CREATE TABLE department(
     dept_id BIGINT NOT NULL,
     dept_name VARCHAR(255) NOT NULL,
@@ -17,7 +18,7 @@ CREATE TABLE student(
 CREATE TABLE professor(
     prof_id BIGINT NOT NULL,
     prof_name VARCHAR(255) NOT NULL,
-    dept_id INT NOT NULL,
+    dept_id BIGINT NOT NULL,
     PRIMARY KEY (prof_id)
 );
 CREATE TABLE course(
