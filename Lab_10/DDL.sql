@@ -38,7 +38,7 @@ CREATE TABLE enrolled(
     course_code VARCHAR(10) NOT NULL,
     quarter VARCHAR(10) NOT NULL,
     year INT NOT NULL,
-    enrolled DATE NOT NULL,
+    enrolled_at DATE NOT NULL,
     PRIMARY KEY (student_id, course_code, quarter, year)
 );
 -- Add foreign keys
